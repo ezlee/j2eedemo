@@ -1,4 +1,4 @@
-node ("jenkinslave.example.com") {
+node {
    // Mark the code checkout 'stage'....
    stage 'Checkout'
 
