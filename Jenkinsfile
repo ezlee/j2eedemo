@@ -26,7 +26,7 @@ repo =  "Demo-repo/RELEASES/promo"
 
 def address = artifactoryUrl + repo
 def conn = address.toURL().openConnection()
-conn.setRequestProperty("X-JFrog-Art-Api", ${ARTIFACTORY_JENKINS_API_KEY})
+conn.setRequestProperty("X-JFrog-Art-Api", "AKCp2Vob4bTik2Kk48gM7HbCDMSrEW4WnTmxdzqBrFSKNhipSHwo7nFjFC4aogB7wo9L6GzZt")
 
 snapshots_list = []
 if (conn.responseCode == 200) {
