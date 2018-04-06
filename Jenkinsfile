@@ -17,6 +17,7 @@ node {
 
    stage name: 'Production', concurrency: 1
 
+import hudson.model.*
 artifactoryUrl = "http://127.0.0.1:8081/artifactory/"
 repo =  "Demo-repo"
 
