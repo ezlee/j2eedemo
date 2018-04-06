@@ -20,7 +20,6 @@ node {
                               credentialsId: 'ARTIFACTORY_JENKINS_API_KEY',
                               variable: 'ARTIFACTORY_JENKINS_API_KEY']]) {
 
-#import hudson.model.*
 
 artifactoryUrl = "http://127.0.0.1:8081/artifactory/"
 authString = $ARTIFACTORY_JENKINS_API_KEY
