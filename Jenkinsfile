@@ -16,10 +16,6 @@ node {
    sh "${mvnHome}/bin/mvn clean install"
 
    stage name: 'Production', concurrency: 1
-            withCredentials([[$class: 'StringBinding',
-                              credentialsId: 'ARTIFACTORY_JENKINS_API_KEY',
-                              variable: 'ARTIFACTORY_JENKINS_API_KEY']]) {
-
 
 artifactoryUrl = "http://127.0.0.1:8081/artifactory/"
 repo =  "Demo-repo"
@@ -62,5 +58,4 @@ def commonIndices = Math.min(verA.size(), verB.size())
 }.reverse()
 
 return sorted
-}
 }
