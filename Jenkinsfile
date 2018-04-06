@@ -22,7 +22,7 @@ node {
 
 
 artifactoryUrl = "http://127.0.0.1:8081/artifactory/"
-repo =  "Demo-repo/RELEASES/promo"
+repo =  "Demo-repo"
 
 def address = artifactoryUrl + repo
 def conn = address.toURL().openConnection()
