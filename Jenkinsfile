@@ -22,12 +22,11 @@ node {
 
 
 artifactoryUrl = "http://127.0.0.1:8081/artifactory/"
-authString = $ARTIFACTORY_JENKINS_API_KEY
 repo =  "Demo-repo/RELEASES/promo"
 
 def address = artifactoryUrl + repo
 def conn = address.toURL().openConnection()
-conn.setRequestProperty("X-JFrog-Art-Api", authString)
+conn.setRequestProperty("X-JFrog-Art-Api", $ARTIFACTORY_JENKINS_API_KEY)
 
 snapshots_list = []
 if (conn.responseCode == 200) {
