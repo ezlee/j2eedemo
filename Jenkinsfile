@@ -9,7 +9,7 @@ node {
 
     stage ('Artifactory configuration') {
         // Obtain an Artifactory server instance, defined in Jenkins --> Manage:
-        server = Artifactory.server local_jfrog 
+        server = Artifactory.server 'local_jfrog'
 
         rtMaven = Artifactory.newMavenBuild()
         rtMaven.tool = M3 // Tool name from Jenkins configuration
