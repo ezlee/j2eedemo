@@ -12,7 +12,7 @@ node {
         server = Artifactory.server 'local_jfrog'
 
         rtMaven = Artifactory.newMavenBuild()
-        rtMaven.tool = M3 // Tool name from Jenkins configuration
+        rtMaven.tool = 'M3' // Tool name from Jenkins configuration
         rtMaven.deployer releaseRepo: 'Demo-repo', snapshotRepo: 'Demo-repo', server: server
         rtMaven.resolver releaseRepo: 'maven2-remote', snapshotRepo: 'maven2-remote', server: server
         rtMaven.deployer.deployArtifacts = false // Disable artifacts deployment during Maven run
