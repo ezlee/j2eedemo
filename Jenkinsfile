@@ -9,8 +9,8 @@ node {
 
     stage ('Artifactory configuration') {
         rtMaven.tool = 'M3' // Tool name from Jenkins configuration
-        rtMaven.deployer releaseRepo: 'Demo-repo', snapshotRepo: 'Demo-repo', server: server
-        rtMaven.resolver releaseRepo: 'maven2-remote', snapshotRepo: 'maven2-remote-snapshot', server: server
+        rtMaven.deployer releaseRepo: 'Demo-repo', server: server
+        rtMaven.resolver releaseRepo: 'maven2-remote', server: server
         buildInfo = Artifactory.newBuildInfo()
     }
 
