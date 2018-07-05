@@ -1,5 +1,5 @@
 node {
-    def server = Artifactory.newServer url: 'http://127.0.0.1:8081/artifactory', credentialsId: 'JFROG-ADMIN-PASSWORD'
+    def server = Artifactory.newServer url: 'http://127.0.0.1:8081/artifactory', credentialsId: 'ARTIFACTORY_JENKINS_API_KEY'
     def rtMaven = Artifactory.newMavenBuild()
     def buildInfo
 
